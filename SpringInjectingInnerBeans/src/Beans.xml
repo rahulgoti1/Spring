@@ -1,0 +1,31 @@
+<beans xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.4.xsd 
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<bean id="triangle" class="com.secure.rahul.Triangle">
+		<property name="pointA" ref="pointA"></property>
+		<property name="pointB">
+			<bean class="com.secure.rahul.Point">
+				<property name="x" value="0"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		<property name="pointC">
+			<bean class="com.secure.rahul.Point">
+				<property name="x" value="1"></property>
+				<property name="y" value="1"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean class="com.secure.rahul.Point" id="pointA">
+		<property name="x" value="3"></property>
+		<property name="y" value="3"></property>
+	</bean>
+</beans>

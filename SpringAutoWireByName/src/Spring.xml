@@ -1,0 +1,22 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean autowire="byName" class="com.secure.rahul.Triangle" id="triangle">
+	</bean>
+	<bean class="com.secure.rahul.Point" id="pointA">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean class="com.secure.rahul.Point" id="pointB">
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<bean class="com.secure.rahul.Point" id="pointC">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+</beans>
